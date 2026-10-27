@@ -35,8 +35,8 @@ void minMonedas(const vector<int>& V, int d, vector<int>& salida){
 	//Tabla de mínimo hecha.
 	//Ahora rellenar el vector salida
 	int i=tamV-1, j=d;
-	while(i!=0 || j!=0){
-	   if(M[i][j]!=M[i-1][j] || i==0){ //Mientras hayamos llegado hasta la moneda más pequeña o la menor tome más monedas 
+	while(j>0){
+	   if(i==0 || M[i][j]!=M[i-1][j]){ //Mientras hayamos llegado hasta la moneda más pequeña o la menor tome más monedas 
 	      salida[i]++; //Sumamos una moneda del tipo que sirve para llegar al mínimo devuelto
 	      j=j-V[i]; //nos desplazamos en horizontal
 	   }
@@ -45,4 +45,4 @@ void minMonedas(const vector<int>& V, int d, vector<int>& salida){
 	   }
 	}
 
-}
+}//Cabe destacar que tal y como está el código de intentar devolver un cambio el cual no es posible debido a que es muy pequeño y no hay combinación, devolverá un cambio mayor

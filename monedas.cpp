@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(){
-	vector<int> salida = {0,0,0,0,0}, V = {1,2,3,5,7};
+	vector<int> salida = {0,0,0,0,0}, V = {2,3,5,7,11};
 	int d;
 	//char num[3];
 	cout << "Dime un cambio a devolver" << endl;
